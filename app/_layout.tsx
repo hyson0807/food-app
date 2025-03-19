@@ -7,6 +7,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="main" options={{ headerShown: false }} />
           <Stack.Screen name="recipe/index" options={{ headerShown: false }} />
+          <Stack.Screen name="recipe/searchPage" options={{ headerShown: false }} />
           <Stack.Screen name="(profile)/profile" options={{ headerShown: false }}/>
           <Stack.Screen name="(settings)/setting" options={{ headerShown: false }}/>
 
