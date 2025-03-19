@@ -14,9 +14,9 @@ export default function Main() {
 
     const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
         const currentY = event.nativeEvent.contentOffset.y;
-        if(currentY > lastScrollY.current + 5) {
+        if(currentY > lastScrollY.current + 10) {
             setShowNavBar(false);
-        } else if(currentY < lastScrollY.current - 5) {
+        } else if(currentY < lastScrollY.current - 10) {
             setShowNavBar(true);
         }
         lastScrollY.current = currentY;
@@ -37,12 +37,7 @@ export default function Main() {
           ListHeaderComponent={
                 <HeaderComponent />
           }
-          ListFooterComponent={
-              <TouchableOpacity className="justify-center items-center"
-                  onPress={()=> {router.push("/profile");}}>
-                  <Text className="text-white">Profile</Text>
-              </TouchableOpacity>
-          }
+
       />
 
 
