@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
     return (
-        <Animated.View className="  h-11 flex-row items-center justify-between mb-4 bg-bg " >
+        <Animated.View className="  h-11 flex-row items-center justify-between bg-bg " >
             <View className="ml-4  px-5 rounded-2xl border-white border-2">
                 <Text className="text-white text-xl">FindFood</Text>
             </View>

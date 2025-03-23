@@ -1,18 +1,19 @@
-import { Stack } from "expo-router";
 import "./global.css";
+import {SafeAreaProvider} from "react-native-safe-area-context";
+import {SafeAreaView} from "react-native";
+import InitialLayout from "@/components/InitialLayout";
+import ClerkAndConvexProvider from "@/providers/ClerkAndConvexProvider";
 
 export default function RootLayout() {
+
+
   return (
-      <Stack initialRouteName="index">
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="main" options={{ headerShown: false }} />
-          <Stack.Screen name="recipe/index" options={{ headerShown: false }} />
-          <Stack.Screen name="recipe/searchPage" options={{ headerShown: false }} />
-          <Stack.Screen name="(profile)/profile" options={{ headerShown: false }}/>
-          <Stack.Screen name="(settings)/setting" options={{ headerShown: false }}/>
-
-      </Stack>
+      <ClerkAndConvexProvider>
+      <SafeAreaProvider>
+          <SafeAreaView className="flex-1 bg-bg">
+            <InitialLayout />
+          </SafeAreaView>
+      </SafeAreaProvider>
+      </ClerkAndConvexProvider>
   )
-
-
 }

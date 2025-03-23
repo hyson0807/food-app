@@ -1,4 +1,13 @@
-import {FlatList, SafeAreaView, Text, TouchableOpacity, Animated, NativeScrollEvent, NativeSyntheticEvent} from "react-native";
+import {
+    FlatList,
+    SafeAreaView,
+    Text,
+    TouchableOpacity,
+    Animated,
+    NativeScrollEvent,
+    NativeSyntheticEvent,
+    View
+} from "react-native";
 import React, {useRef, useState} from "react";
 import data from "@/app/data";
 import Post from "@/app/(components_home)/Post";
@@ -22,25 +31,25 @@ export default function Main() {
         lastScrollY.current = currentY;
     };
 
-  return (
-      <SafeAreaView className="flex-1 bg-bg">
-          {showNavBar && (
-              <Navbar/>
-          )}
+    return (
+        <View className="bg-bg">
+            {showNavBar && (
+                <Navbar/>
+            )}
 
-      <FlatList
-          data={post}
-          renderItem={({item})=> <Post data={item} /> }
-          keyExtractor={(item) => item.id.toString()}
-          onScroll={handleScroll}
-          scrollEventThrottle={16}
-          ListHeaderComponent={
-                <HeaderComponent />
-          }
+            <FlatList
+                data={post}
+                renderItem={({item})=> <Post data={item} /> }
+                keyExtractor={(item) => item.id.toString()}
+                onScroll={handleScroll}
+                scrollEventThrottle={16}
+                ListHeaderComponent={
+                    <HeaderComponent />
+                }
 
-      />
+            />
 
 
-      </SafeAreaView>
-  )
+        </View>
+    )
 }
