@@ -15,9 +15,11 @@ const HeaderComponent = () => {
                         </TouchableOpacity>
                     </Link>
 
-                <View className="w-[23%] h-20 bg-primary items-center justify-center mb-4 rounded-2xl">
-                    <Text className="text-white">모달 2</Text>
-                </View>
+                <Link href={"/instagram"} asChild>
+                    <TouchableOpacity className="w-[23%] h-20 bg-primary items-center justify-center mb-4 rounded-2xl">
+                        <Text className="text-white">인스타그램</Text>
+                    </TouchableOpacity>
+                </Link>
                 <View className="w-[23%] h-20 bg-primary items-center justify-center mb-4 rounded-2xl">
                     <Text className="text-white">모달 3</Text>
                 </View>

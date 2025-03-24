@@ -13,6 +13,10 @@ const Profile = () => {
             <View className="justify-center items-center">
                 <Text className="text-white">12322222</Text>
             </View>
+
+            <View>
+                <Text className="text-white"></Text>
+            </View>
         </View>
 
     )
